@@ -13,16 +13,16 @@ Rappel des recommandations :
 
 |  #  | Déclaration (et contexte) | Conforme ? | Recommandation / meilleur nom |
 | --- | --- | --- | --- |
-| 1 | `int nNbEtudiants = 25;` | | |
-| 2 | `double surface = largeur * hauteur;` | | |
-| 3 | `const int NB_MAX_ETUDIANTS = 100;` | | |
-| 4 | `int nombreTotalDeBouteillesDansUnPack = 6;` | | |
-| 5 | `double x = 13.2 * nb_bouteilles; // poids du pack en grammes` | | |
-| 6 | `int nbPacks, nb_bouteilles, PrixUnitaire;` | | |
-| 7 | `double dblPrix = 2.5;` | | |
-| 8 | `int a = 4, b = 12;` (utilisées 40 lignes plus loin, dans un calcul de prix) | | |
-| 9 | `double volume_canette_l = 0.33;` | | |
-| 10 | `int INT = 3;` | | |
+| 1 | `int nNbEtudiants = 25;`     | Non | NL5 et NL10 Changer la variable nNbEtudiants / **nb_etudiants** |
+| 2 | `double surface = largeur * hauteur;` | Oui  | - |
+| 3 | `const int NB_MAX_ETUDIANTS = 100;` | Non |  NL9 utiliser le style snake_case  / **nb_max_etudiants**|
+| 4 | `int nombreTotalDeBouteillesDansUnPack = 6;` | Non |  trop long : NL7 , NL10 -->  **nb_bouteilles** |
+| 5 | `double x = 13.2 * nb_bouteilles; // poids du pack en grammes` | Non | Changer le x --> **double poids_pack**  |
+| 6 | `int nbPacks, nb_bouteilles, PrixUnitaire;` | Non| NL8 -> **nb_packs,nb_bouteilles, prix_unitaire** |
+| 7 | `double dblPrix = 2.5;` |Non | Nl5 -> **double prix** |
+| 8 | `int a = 4, b = 12;` (utilisées 40 lignes plus loin, dans un calcul de prix) | Non | Nl7 utilisé au même endroit |
+| 9 | `double volume_canette_l = 0.33;` | Oui | -  |
+| 10 | `int INT = 3;` | Non  | NL9  enlever le INT car le nom dit rien à l'usage |
 
 <details>
 <summary>Solution</summary>
