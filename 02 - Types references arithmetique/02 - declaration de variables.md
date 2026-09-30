@@ -10,6 +10,7 @@ Pour chaque séquence d'instructions suivante, déterminez si elle est correcte 
     n = 1 - 2 * n;
     n = n + 1;
    ~~~
+    n = 0
 
 2.  
     ~~~cpp
@@ -17,23 +18,27 @@ Pour chaque séquence d'instructions suivante, déterminez si elle est correcte 
     n = n + 1;
     int n = 1 - 2 * n;
     ~~~
+   Non car on refait une autre initialisation de la variable(déclarer 2 fois)
 3. 
     ~~~cpp
     int n = 1, p = 2;
     n = (n + 1) * (n - k);
     ~~~
+   Non car le p est pas utilisé et il y a une variable k qui est inutile(pas déclarer)
 4. 
     ~~~cpp
     int n, m = 0;
     n = 2 * n - 1;
     m = n + 1;
     ~~~
+   Non car on initialise pas la variable n
  5. 
     ~~~cpp
     int n = 5, m = 0;
     const int nb_produit = 10;
     m = n * nb_produit - 1;    
     ~~~
+    m = 49
  6. 
     ~~~cpp
     int n = 5, m = 0;
@@ -41,6 +46,7 @@ Pour chaque séquence d'instructions suivante, déterminez si elle est correcte 
     nb_produit -= 1;
     m = n * nb_produit;
     ~~~
+    Non la variable nb_produit est une constante donc on ne peut pas la modifier
 
 <details>
 <summary>Solution</summary>
